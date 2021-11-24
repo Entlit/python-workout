@@ -13,7 +13,7 @@ def count_certain_words():
     counts = dict.fromkeys(words, 0)
 
     for one_line in open(filename):
-        for one_word in one_line:
+        for one_word in one_line.split():
             if one_word in counts:
                 counts[one_word] += 1
 
